@@ -12,13 +12,13 @@ const Badge = ({ text, icon, disabled }: Badge) => {
       withBorder
       style={{
         width: "100%",
-        height: "170px",
+        height: "180px",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
       }}
     >
-      <Box className={`fa-layers fa-3x ${disabled ? "" : "fa-beat"}`}>
+      <Box className="fa-layers fa-3x">
         <FontAwesomeIcon
           icon={faCircle}
           color={disabled ? "gray" : primaryColor}
@@ -30,7 +30,9 @@ const Badge = ({ text, icon, disabled }: Badge) => {
           width="48px"
         />
       </Box>
-      <Text color={disabled ? "grey" : "black"}>{text}</Text>
+      <Text align="center" mt={5} color={disabled ? "grey" : "black"}>
+        {text}
+      </Text>
     </Card>
   );
 };
