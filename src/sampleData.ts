@@ -128,25 +128,25 @@ export default {
   ],
   leaderboard: [
     {
-      place: 2,
+      rank: 2,
       name: "Felix T.",
       shifts: shiftsDriven,
       company: "SW",
     },
     {
-      place: 1,
+      rank: 1,
       name: "Mohammed M.",
       shifts: 200,
       company: "SO",
     },
     {
-      place: 3,
+      rank: 3,
       name: "Max T.",
       shifts: 90,
       company: "SW",
     },
     {
-      place: 4,
+      rank: 4,
       name: "Florian T.",
       shifts: 80,
       company: "SO",
@@ -157,7 +157,7 @@ export default {
   shiftsDriven: number;
   badges: Badge[];
   leaderboard: {
-    place: number;
+    rank: number;
     name: string;
     shifts: number;
     company: string;
