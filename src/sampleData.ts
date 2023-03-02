@@ -10,50 +10,74 @@ const shiftsPerMonth = [
   {
     month: "März",
     shifts: 8,
+    setupTimes: [5, 10],
+    averageSetupTime: 7.5,
   },
   {
     month: "April",
     shifts: 10,
+    setupTimes: [2, 14],
+    averageSetupTime: 10,
   },
   {
     month: "Mai",
     shifts: 7,
+    setupTimes: [5, 10],
+    averageSetupTime: 7.5,
   },
   {
     month: "Juni",
     shifts: 9,
+    setupTimes: [2, 7],
+    averageSetupTime: 3,
   },
   {
     month: "Juli",
     shifts: 8,
+    setupTimes: [5, 10],
+    averageSetupTime: 7.5,
   },
   {
     month: "August",
     shifts: 10,
+    setupTimes: [2, 7],
+    averageSetupTime: 3,
   },
   {
     month: "September",
     shifts: 7,
+    setupTimes: [5, 10],
+    averageSetupTime: 7.5,
   },
   {
     month: "Oktober",
     shifts: 9,
+    setupTimes: [2, 7],
+    averageSetupTime: 3,
   },
   {
     month: "November",
     shifts: 8,
+    setupTimes: [5, 10],
+    averageSetupTime: 7.5,
   },
   {
     month: "Dezember",
     shifts: 10,
+    setupTimes: [2, 7],
+    averageSetupTime: 3,
   },
   {
     month: "Januar",
     shifts: 7,
+    setupTimes: [5, 10],
+    averageSetupTime: 7.5,
   },
   {
     month: "Februar",
     shifts: 9,
+    setupTimes: [2, 7],
+    averageSetupTime: 3,
   },
 ];
 
@@ -141,5 +165,7 @@ export default {
   shiftsPerMonth: {
     month: string;
     shifts: number;
+    setupTimes: number[];
+    averageSetupTime: number;
   }[];
 };
