@@ -6,6 +6,7 @@ import { sortBy } from "lodash";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { primaryColor } from "./theme";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
+import { BubbleWithText } from "./BubbleWithText";
 
 export const Leaderboard = () => {
   const { leaderboard } = sampleData;
@@ -35,14 +36,7 @@ export const Leaderboard = () => {
             if (item.place === 2) color = "grey";
             if (item.place === 3) color = "#C4A484";
 
-            return (
-              <span className="fa-layers">
-                <FontAwesomeIcon icon={faCircle} color={color} size="lg" />
-                <Text className="fa-layers-text" color="white">
-                  {item.place}
-                </Text>
-              </span>
-            );
+            return <BubbleWithText color={color} text={item.place} />;
           },
         },
         { accessor: "name", width: "80%", sortable: true },

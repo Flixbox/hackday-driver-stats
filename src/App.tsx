@@ -11,6 +11,7 @@ import {
 } from "@mantine/core";
 import { useState } from "react";
 import { BadgeView } from "./BadgeView";
+import { BubbleWithText } from "./BubbleWithText";
 import { Leaderboard } from "./Leaderboard";
 import sampleData from "./sampleData";
 import { Stats } from "./Stats";
@@ -33,10 +34,7 @@ function App() {
 
         <Stack spacing={0} mb={10} align="center">
           <Box display="flex">
-            <span className="fa-layers">
-              <FontAwesomeIcon icon={faCircle} color={primaryColor} size="lg" />
-              <span className="fa-layers-text">5</span>
-            </span>
+            <BubbleWithText text={5} />
             <Progress
               size="xl"
               striped
@@ -48,10 +46,7 @@ function App() {
               ]}
               style={{ width: 350, marginLeft: 10, marginRight: 10 }}
             />
-            <span className="fa-layers">
-              <FontAwesomeIcon icon={faCircle} color={primaryColor} size="lg" />
-              <span className="fa-layers-text">6</span>
-            </span>
+            <BubbleWithText text={6} />
           </Box>
           <Text color="black" fz="xs">
             {shiftsDriven} von {nextLevelAtShifts} Schichten gefahren
