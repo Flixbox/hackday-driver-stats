@@ -23,7 +23,12 @@ const Badge = ({ text, icon, disabled }: Badge) => {
           icon={faCircle}
           color={disabled ? "gray" : primaryColor}
         />
-        <FontAwesomeIcon icon={icon} color="white" transform="shrink-8" />
+        <FontAwesomeIcon
+          icon={icon}
+          color="white"
+          transform="shrink-8"
+          width="48px"
+        />
       </Box>
       <Text color={disabled ? "grey" : "black"}>{text}</Text>
     </Card>
