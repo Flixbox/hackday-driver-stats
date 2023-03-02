@@ -9,6 +9,7 @@ import {
   Bar,
   Line,
   ComposedChart,
+  ReferenceLine,
 } from "recharts";
 import sampleData from "./sampleData";
 import { primaryColor } from "./theme";
@@ -37,6 +38,7 @@ export const Stats = () => {
           stroke="#8884d8"
           strokeWidth={3}
         />
+        <ReferenceLine y={10} stroke="red" />
       </ComposedChart>
     </Stack>
   );
