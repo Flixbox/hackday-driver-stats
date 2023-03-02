@@ -12,6 +12,7 @@ import {
 import { useState } from "react";
 import { BadgeView } from "./BadgeView";
 import { Leaderboard } from "./Leaderboard";
+import { Stats } from "./Stats";
 import { primaryColor } from "./theme";
 
 const SHIFTS_DRIVEN = 6;
@@ -76,7 +77,7 @@ function App() {
         </Tabs.Panel>
 
         <Tabs.Panel value="stats" pt="xs">
-          Settings tab content
+          <Stats />
         </Tabs.Panel>
       </Tabs>
     </Container>
