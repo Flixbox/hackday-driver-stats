@@ -1,5 +1,11 @@
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
+export type Badge = {
+  text: string;
+  icon: IconProp;
+  disabled?: boolean;
+};
+
 export default {
   badges: [
     {
@@ -13,18 +19,20 @@ export default {
     {
       text: "Du bist seit 1 Jahr Fahrer",
       icon: "rocket",
+      disabled: true,
     },
     {
       text: "Du bist an Silvester gefahren",
-      icon: "rocket",
+      icon: "flask",
     },
     {
       text: "Du bist am Zuckerfest gefahren",
-      icon: "rocket",
+      icon: "star",
+      disabled: true,
     },
     {
       text: "Du bist an Weihnachten gefahren",
-      icon: "rocket",
+      icon: "tree",
     },
     {
       text: "Weniger als 3x krank in 365 Tagen",
@@ -32,11 +40,12 @@ export default {
     },
     {
       text: "Du hast deinen ersten Betriebsdienst erledigt",
-      icon: "rocket",
+      icon: "handshake",
+      disabled: true,
     },
     {
       text: "Du bist 5 Wochen in Folge mindestens 1 Schicht gefahren",
-      icon: "rocket",
+      icon: "briefcase",
     },
   ],
   leaderboard: [
@@ -66,10 +75,7 @@ export default {
     },
   ],
 } as {
-  badges: {
-    text: string;
-    icon: IconProp;
-  }[];
+  badges: Badge[];
   leaderboard: {
     place: number;
     name: string;

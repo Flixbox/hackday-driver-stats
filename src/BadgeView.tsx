@@ -3,9 +3,9 @@ import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Box, Card, Grid, Text } from "@mantine/core";
 import { primaryColor } from "./theme";
-import data from "./sampleData";
+import data, { type Badge } from "./sampleData";
 
-const Badge = ({ text, icon }: { text: string; icon: IconProp }) => {
+const Badge = ({ text, icon, disabled }: Badge) => {
   return (
     <Card
       shadow="sm"
@@ -18,11 +18,14 @@ const Badge = ({ text, icon }: { text: string; icon: IconProp }) => {
         alignItems: "center",
       }}
     >
-      <Box className="fa-layers fa-3x fa-beat">
-        <FontAwesomeIcon icon={faCircle} color={primaryColor} />
+      <Box className={`fa-layers fa-3x ${disabled ? "" : "fa-beat"}`}>
+        <FontAwesomeIcon
+          icon={faCircle}
+          color={disabled ? "gray" : primaryColor}
+        />
         <FontAwesomeIcon icon={icon} color="white" transform="shrink-8" />
       </Box>
-      <Text>{text}</Text>
+      <Text color={disabled ? "grey" : "black"}>{text}</Text>
     </Card>
   );
 };
@@ -32,7 +35,7 @@ export const BadgeView = () => {
     <Grid>
       {data.badges.map((item) => (
         <Grid.Col span={4}>
-          <Badge key={item.text} text={item.text} icon={item.icon} />
+          <Badge key={item.text} {...item} />
         </Grid.Col>
       ))}
     </Grid>
