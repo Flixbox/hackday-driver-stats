@@ -74,6 +74,56 @@ export default {
       company: "SO",
     },
   ],
+  shiftsPerMonth: [
+    {
+      month: "März",
+      shifts: 8,
+    },
+    {
+      month: "April",
+      shifts: 10,
+    },
+    {
+      month: "Mai",
+      shifts: 7,
+    },
+    {
+      month: "Juni",
+      shifts: 9,
+    },
+    {
+      month: "Juli",
+      shifts: 8,
+    },
+    {
+      month: "August",
+      shifts: 10,
+    },
+    {
+      month: "September",
+      shifts: 7,
+    },
+    {
+      month: "Oktober",
+      shifts: 9,
+    },
+    {
+      month: "November",
+      shifts: 8,
+    },
+    {
+      month: "Dezember",
+      shifts: 10,
+    },
+    {
+      month: "Januar",
+      shifts: 7,
+    },
+    {
+      month: "Februar",
+      shifts: 9,
+    },
+  ],
 } as {
   badges: Badge[];
   leaderboard: {
@@ -81,5 +131,9 @@ export default {
     name: string;
     shifts: number;
     company: string;
+  }[];
+  shiftsPerMonth: {
+    month: string;
+    shifts: number;
   }[];
 };
