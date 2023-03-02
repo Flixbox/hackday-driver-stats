@@ -41,18 +41,22 @@ export default {
   ],
   leaderboard: [
     {
+      place: 1,
       name: "Felix T.",
       shifts: 100,
     },
     {
+      place: 2,
       name: "Mohammed M.",
       shifts: 99,
     },
     {
+      place: 3,
       name: "Max T.",
       shifts: 90,
     },
     {
+      place: 4,
       name: "Florian T.",
       shifts: 80,
     },
@@ -63,6 +67,7 @@ export default {
     icon: IconProp;
   }[];
   leaderboard: {
+    place: number;
     name: string;
     shifts: number;
   }[];
