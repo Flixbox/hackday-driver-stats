@@ -27,22 +27,22 @@ export const Leaderboard = () => {
       records={records}
       columns={[
         {
-            accessor: 'place',
-            title: "",
-            render: (item) => (
-              item.place === 1 ? (
-                <span className="fa-layers">
-                    <FontAwesomeIcon icon={faCircle} color={primaryColor} size="lg" />
-                    <span className="fa-layers-text">{item.place}</span>
-                </span>
-                ) : (
-                <span className="fa-layers">
-                    <FontAwesomeIcon icon={faCircle} color={primaryColor} size="lg" />
-                    <span className="fa-layers-text">{item.place}</span>
-                </span>
-                )
-            ),
+          accessor: "place",
+          title: "",
+          render: (item) => {
+            let color = primaryColor;
+            if (item.place === 1) color = "gold";
+            if (item.place === 2) color = "silver";
+            if (item.place === 3) color = "#C4A484";
+
+            return (
+              <span className="fa-layers">
+                <FontAwesomeIcon icon={faCircle} color={color} size="lg" />
+                <span className="fa-layers-text">{item.place}</span>
+              </span>
+            );
           },
+        },
         { accessor: "name", width: "80%", sortable: true },
         { accessor: "shifts", width: "20%", sortable: true },
       ]}
