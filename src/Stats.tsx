@@ -18,7 +18,7 @@ const generateData = () => {
   console.log(months);
   for (let i = 0; i < 12; i++) {
     data.push({
-      month: `Monat ${i + 1}`,
+      month: months[i],
       shifts: Math.floor(Math.random() * 100),
     });
   }
