@@ -31,7 +31,7 @@ function App() {
       >
         <Avatar radius="xl" size={100} mr={6} />
 
-        <Stack spacing={0} align="center">
+        <Stack spacing={0} mb={10} align="center">
           <Box display="flex">
             <span className="fa-layers">
               <FontAwesomeIcon icon={faCircle} color={primaryColor} size="lg" />
