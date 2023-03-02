@@ -1,6 +1,6 @@
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Container, Progress, Box, Avatar } from "@mantine/core";
+import { Container, Progress, Box, Avatar, Tabs } from "@mantine/core";
 import { useState } from "react";
 import { BadgeView } from "./BadgeView";
 import { primaryColor } from "./theme";
@@ -43,7 +43,25 @@ function App() {
           </span>
         </Box>
       </Box>
-      <BadgeView />
+      <Tabs defaultValue="badges">
+        <Tabs.List grow>
+          <Tabs.Tab value="badges">Badges</Tabs.Tab>
+          <Tabs.Tab value="leaderboard">Leaderboard</Tabs.Tab>
+          <Tabs.Tab value="stats">Stats</Tabs.Tab>
+        </Tabs.List>
+
+        <Tabs.Panel value="badges" pt="xs">
+          <BadgeView />
+        </Tabs.Panel>
+
+        <Tabs.Panel value="leaderboard" pt="xs">
+          Messages tab content
+        </Tabs.Panel>
+
+        <Tabs.Panel value="stats" pt="xs">
+          Settings tab content
+        </Tabs.Panel>
+      </Tabs>
     </Container>
   );
 }
