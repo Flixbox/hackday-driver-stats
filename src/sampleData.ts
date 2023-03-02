@@ -39,9 +39,31 @@ export default {
       icon: "rocket",
     },
   ],
+  leaderboard: [
+    {
+      name: "Felix T.",
+      shifts: 100,
+    },
+    {
+      name: "Mohammed M.",
+      shifts: 99,
+    },
+    {
+      name: "Max T.",
+      shifts: 90,
+    },
+    {
+      name: "Florian T.",
+      shifts: 80,
+    },
+  ],
 } as {
   badges: {
     text: string;
     icon: IconProp;
+  }[];
+  leaderboard: {
+    name: string;
+    shifts: number;
   }[];
 };

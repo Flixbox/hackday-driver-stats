@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Container, Progress, Box, Avatar, Tabs } from "@mantine/core";
 import { useState } from "react";
 import { BadgeView } from "./BadgeView";
+import { Leaderboard } from "./Leaderboard";
 import { primaryColor } from "./theme";
 
 const SHIFTS_DRIVEN = 6;
@@ -55,7 +56,7 @@ function App() {
         </Tabs.Panel>
 
         <Tabs.Panel value="leaderboard" pt="xs">
-          Messages tab content
+          <Leaderboard />
         </Tabs.Panel>
 
         <Tabs.Panel value="stats" pt="xs">
