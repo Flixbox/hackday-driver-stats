@@ -31,7 +31,12 @@ export const Stats = () => {
         <Tooltip />
         <Legend />
         <Bar dataKey="setupTimes" fill={primaryColor} />
-        <Line type="monotone" dataKey="averageSetupTime" stroke="#8884d8" />
+        <Line
+          type="monotone"
+          dataKey="averageSetupTime"
+          stroke="#8884d8"
+          strokeWidth={3}
+        />
       </ComposedChart>
     </Stack>
   );
