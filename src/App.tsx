@@ -1,6 +1,14 @@
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Container, Progress, Box, Avatar, Tabs } from "@mantine/core";
+import {
+  Container,
+  Progress,
+  Box,
+  Avatar,
+  Tabs,
+  Text,
+  Stack,
+} from "@mantine/core";
 import { useState } from "react";
 import { BadgeView } from "./BadgeView";
 import { Leaderboard } from "./Leaderboard";
@@ -21,28 +29,36 @@ function App() {
       >
         <Avatar radius="xl" size={100} mr={6} />
 
-        <Box display="flex">
-          <span className="fa-layers">
-            <FontAwesomeIcon icon={faCircle} color={primaryColor} size="lg" />
-            <span className="fa-layers-text">1</span>
-          </span>
-          <Progress
-            size="xl"
-            striped
-            sections={[
-              {
-                value: 40,
-                color: "primary",
-                label: `${SHIFTS_DRIVEN} von ${NEXT_LEVEL_AT_SHIFTS}`,
-              },
-            ]}
-            style={{ width: 350, marginLeft: 10, marginRight: 10 }}
-          />
-          <span className="fa-layers">
-            <FontAwesomeIcon icon={faCircle} color={primaryColor} size="lg" />
-            <span className="fa-layers-text">2</span>
-          </span>
-        </Box>
+        <Stack spacing={0} align="center">
+          <Box display="flex">
+            <span className="fa-layers">
+              <FontAwesomeIcon icon={faCircle} color={primaryColor} size="lg" />
+              <span className="fa-layers-text">1</span>
+            </span>
+            <Progress
+              size="xl"
+              striped
+              sections={[
+                {
+                  value: 40,
+                  color: "primary",
+                },
+              ]}
+              style={{ width: 350, marginLeft: 10, marginRight: 10 }}
+            />
+            <span className="fa-layers">
+              <FontAwesomeIcon icon={faCircle} color={primaryColor} size="lg" />
+              <span className="fa-layers-text">2</span>
+            </span>
+          </Box>
+          <Text color="black" fz="xs">
+            {SHIFTS_DRIVEN} von {NEXT_LEVEL_AT_SHIFTS} Schichten gefahren
+          </Text>
+          <Text color="black" fz="xs">
+            Noch {NEXT_LEVEL_AT_SHIFTS - SHIFTS_DRIVEN} Schichten zum nächsten
+            Level
+          </Text>
+        </Stack>
       </Box>
       <Tabs defaultValue="badges">
         <Tabs.List grow>
