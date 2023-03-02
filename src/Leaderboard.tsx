@@ -1,4 +1,4 @@
-import { Box } from "@mantine/core";
+import { Text } from "@mantine/core";
 import { DataTableSortStatus, DataTable } from "mantine-datatable";
 import { useState, useEffect } from "react";
 import sampleData from "./sampleData";
@@ -32,13 +32,15 @@ export const Leaderboard = () => {
           render: (item) => {
             let color = primaryColor;
             if (item.place === 1) color = "gold";
-            if (item.place === 2) color = "silver";
+            if (item.place === 2) color = "grey";
             if (item.place === 3) color = "#C4A484";
 
             return (
               <span className="fa-layers">
                 <FontAwesomeIcon icon={faCircle} color={color} size="lg" />
-                <span className="fa-layers-text">{item.place}</span>
+                <Text className="fa-layers-text" color="white">
+                  {item.place}
+                </Text>
               </span>
             );
           },
