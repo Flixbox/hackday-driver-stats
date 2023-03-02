@@ -1,11 +1,8 @@
-import { Text } from "@mantine/core";
 import { DataTableSortStatus, DataTable } from "mantine-datatable";
 import { useState, useEffect } from "react";
 import sampleData from "./sampleData";
 import { sortBy } from "lodash";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { primaryColor } from "./theme";
-import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import { BubbleWithText } from "./BubbleWithText";
 
 export const Leaderboard = () => {

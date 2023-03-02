@@ -1,5 +1,3 @@
-import { faCircle } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   Container,
   Progress,
@@ -9,17 +7,13 @@ import {
   Text,
   Stack,
 } from "@mantine/core";
-import { useState } from "react";
 import { BadgeView } from "./BadgeView";
 import { BubbleWithText } from "./BubbleWithText";
 import { Leaderboard } from "./Leaderboard";
 import sampleData from "./sampleData";
 import { Stats } from "./Stats";
-import { primaryColor } from "./theme";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   const shiftsDriven = sampleData.shiftsDriven;
   const nextLevelAtShifts = 200;
 
