@@ -11,7 +11,7 @@ const Badge = ({ text, icon }: { text: string; icon: IconProp }) => {
       shadow="sm"
       withBorder
       style={{
-        width: "120px",
+        width: "100%",
         height: "170px",
         display: "flex",
         flexDirection: "column",
@@ -31,7 +31,9 @@ export const BadgeView = () => {
   return (
     <Grid>
       {data.badges.map((item) => (
-        <Badge key={item.text} text={item.text} icon={item.icon} />
+        <Grid.Col span={4}>
+          <Badge key={item.text} text={item.text} icon={item.icon} />
+        </Grid.Col>
       ))}
     </Grid>
   );
