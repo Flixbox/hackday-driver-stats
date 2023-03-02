@@ -12,14 +12,15 @@ import {
 import { useState } from "react";
 import { BadgeView } from "./BadgeView";
 import { Leaderboard } from "./Leaderboard";
+import sampleData from "./sampleData";
 import { Stats } from "./Stats";
 import { primaryColor } from "./theme";
 
-const SHIFTS_DRIVEN = 6;
-const NEXT_LEVEL_AT_SHIFTS = 10;
-
 function App() {
   const [count, setCount] = useState(0);
+
+  const shiftsDriven = sampleData.shiftsDriven;
+  const nextLevelAtShifts = 200;
 
   return (
     <Container size="xs" px="xs" mt={5}>
@@ -34,14 +35,14 @@ function App() {
           <Box display="flex">
             <span className="fa-layers">
               <FontAwesomeIcon icon={faCircle} color={primaryColor} size="lg" />
-              <span className="fa-layers-text">1</span>
+              <span className="fa-layers-text">5</span>
             </span>
             <Progress
               size="xl"
               striped
               sections={[
                 {
-                  value: 40,
+                  value: (shiftsDriven / nextLevelAtShifts) * 100,
                   color: "primary",
                 },
               ]}
@@ -49,15 +50,14 @@ function App() {
             />
             <span className="fa-layers">
               <FontAwesomeIcon icon={faCircle} color={primaryColor} size="lg" />
-              <span className="fa-layers-text">2</span>
+              <span className="fa-layers-text">6</span>
             </span>
           </Box>
           <Text color="black" fz="xs">
-            {SHIFTS_DRIVEN} von {NEXT_LEVEL_AT_SHIFTS} Schichten gefahren
+            {shiftsDriven} von {nextLevelAtShifts} Schichten gefahren
           </Text>
           <Text color="black" fz="xs">
-            Noch {NEXT_LEVEL_AT_SHIFTS - SHIFTS_DRIVEN} Schichten zum nächsten
-            Level
+            Noch {nextLevelAtShifts - shiftsDriven} Schichten zum nächsten Level
           </Text>
         </Stack>
       </Box>
