@@ -44,6 +44,7 @@ export const Leaderboard = () => {
           },
         },
         { accessor: "name", width: "80%", sortable: true },
+        { accessor: "company", width: "20%", sortable: true },
         { accessor: "shifts", width: "20%", sortable: true },
       ]}
       sortStatus={sortStatus}

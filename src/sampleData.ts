@@ -44,21 +44,25 @@ export default {
       place: 1,
       name: "Felix T.",
       shifts: 100,
+      company: "SW",
     },
     {
       place: 2,
       name: "Mohammed M.",
       shifts: 99,
+      company: "SO",
     },
     {
       place: 3,
       name: "Max T.",
       shifts: 90,
+      company: "SW",
     },
     {
       place: 4,
       name: "Florian T.",
       shifts: 80,
+      company: "SO",
     },
   ],
 } as {
@@ -70,5 +74,6 @@ export default {
     place: number;
     name: string;
     shifts: number;
+    company: string;
   }[];
 };
